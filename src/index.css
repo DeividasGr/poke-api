@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 :root {
   --nav-color: rgb(60, 138, 148);
