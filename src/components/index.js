@@ -6,18 +6,22 @@ import './index.css';
 
 function App() {
   return (
-    <div>
-      <nav className="nav">
-        <NavLink className="nav__link" to="/">
-          Search
-        </NavLink>
-      </nav>
-      <Switch>
-        <Route path="/" exact component={PokemonList} />
-        <Route path="/pokemon/:pokemon" exact component={Pokemon} />
-        <Redirect to="/" />
-      </Switch>
-    </div>
+    <>
+      <header>
+        <nav className="nav">
+          <NavLink className="nav__link" to="/">
+            Search
+          </NavLink>
+        </nav>
+      </header>
+      <main>
+        <Switch>
+          <Route path="/" exact component={PokemonList} />
+          <Route path="/pokemon/:pokemon" exact component={Pokemon} />
+          <Redirect to="/" />
+        </Switch>
+      </main>
+    </>
   );
 }
 

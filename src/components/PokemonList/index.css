@@ -1,0 +1,26 @@
+.pokemon-list {
+  width: 108rem;
+  margin: 0 auto;
+}
+
+.pokemon-list__item {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border: 0.2rem solid var(--nav-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.pokemon-list__link {
+  text-decoration: none;
+  color: var(--nav-color);
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.pokemon-list__link:hover {
+  color: var(--black-color);
+  transition: all 0.4s;
+}
