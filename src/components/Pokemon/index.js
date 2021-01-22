@@ -69,10 +69,10 @@ function Pokemon({ match }) {
       );
     }
     if (pokemonState.loading) {
-      return <p>Loading...</p>;
+      return <p className="pokemon__loading">Loading...</p>;
     }
     if (pokemonState.errorMsg !== '') {
-      return <p>{pokemonState.errorMsg}</p>;
+      return <p className="pokemon__error">{pokemonState.errorMsg}</p>;
     }
     return <p>unable to find pokemon</p>;
   };

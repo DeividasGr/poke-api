@@ -40,3 +40,62 @@
   color: var(--nav-color);
   margin-bottom: 0.5rem;
 }
+.pokemon__loading {
+  color: grey;
+  font-family: sans-serif;
+  height: 5vh;
+  left: 50%;
+  overflow-x: hidden;
+  padding-top: 7vh;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  overflow: hidden;
+}
+.pokemon__loading::before {
+  animation: left-to-right 3s alternate infinite linear;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--nav-color),
+    transparent
+  );
+  bottom: 0;
+  content: '';
+  height: 5vh;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.pokemon__loading::after {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--white-color),
+    var(--white-color) 1vw,
+    transparent 1vw,
+    transparent 10vw
+  );
+  content: '';
+  height: 5vh;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.pokemon__error {
+  font-size: 3rem;
+  color: red;
+  text-transform: uppercase;
+}
